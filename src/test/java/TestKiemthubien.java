@@ -46,6 +46,6 @@ public class TestKiemthubien {
     void testCalculateFee(float x, float y, boolean a, int expected) {
         int result = ShippingFeeCalculator.calculateFee(x, y, a);
         assertEquals(expected, result,
-                "Failed for input: distance=" + x + ", weight=" + y + ", fragile=" + a);
+                "Failed for input: distance= " + x + ", weight= " + y + ", fragile= " + a);
     }
 }
