@@ -14,15 +14,15 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestBanggiatri {
+public class TestBangquyetdinh {
 
     static Stream<Arguments> provideTestCases() throws Exception {
         List<Arguments> args = new ArrayList<>();
 
-        try (InputStream is = TestBanggiatri.class.getClassLoader()
-                .getResourceAsStream("TestcaseBangGiaTri.xlsx")) {
+        try (InputStream is = TestBangquyetdinh.class.getClassLoader()
+                .getResourceAsStream("TestcaseBangQuyetDinh.xlsx")) {
             if (is == null) {
-                throw new RuntimeException("Không tìm thấy file TestcaseBangGiaTri.xlsx trong resources");
+                throw new RuntimeException("Không tìm thấy file TestcaseBangQuyetDinh.xlsx trong resources");
             }
             Workbook workbook = WorkbookFactory.create(is);
             Sheet sheet = workbook.getSheet("TestCases");
