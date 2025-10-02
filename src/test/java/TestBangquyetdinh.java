@@ -32,11 +32,11 @@ public class TestBangquyetdinh {
 
             while (rowIterator.hasNext()) {
                 Row row = rowIterator.next();
-                float x = (float) row.getCell(0).getNumericCellValue();
-                float y = (float) row.getCell(1).getNumericCellValue();
-                int fragileInt = (int) row.getCell(2).getNumericCellValue();
+                float x = (float) row.getCell(1).getNumericCellValue();
+                float y = (float) row.getCell(2).getNumericCellValue();
+                int fragileInt = (int) row.getCell(3).getNumericCellValue();
                 boolean a = fragileInt == 1;
-                int expected = (int) row.getCell(3).getNumericCellValue();
+                int expected = (int) row.getCell(4).getNumericCellValue();
                 args.add(Arguments.of(x, y, a, expected));
             }
             workbook.close();
